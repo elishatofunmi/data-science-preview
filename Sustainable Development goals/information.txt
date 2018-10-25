@@ -1,0 +1,82 @@
+The aim of this competition is to classify text content by its relevance to the measurable indicators of the United Nations’ Sustainable Development Goal #3 – Health and Well-Being (SDG 3). Each SDG has several “targets”, or social outcomes that the UN hopes to achieve by 2030. Each of these targets is measured using a set of indicators. These indicators represent the quantitative measurements that will be used to judge whether each SDG target has been achieved or not by 2030.
+
+SDG 3 has 14 targets and 27 indicators. The challenge of this competition will be to create a classifier that labels text content by the 27 SDG 3 indicators that are most “relevant.” The training data for this challenge includes approximately 3,000 web-scraped text from tenders, programs, and documents, as well as news articles about international development and humanitarian aid, and finally text descriptions of organizations involved in those sectors.
+
+A model like this one that classifies text content by relevant SDG indicators would be used to help algorithmically identify development projects, organizations, and documents that relate to the same SDG targets and indicators. Such a tool would be useful for governments, development donors, and development implementers seeking to align resources, find partners, or perform outcomes-focused research.
+
+This inaugural competition is hosted by Devex (www.devex.com).
+
+About Devex:
+
+Devex is the media platform and data powerhouse at the center of the international development community. As a social enterprise, Devex's goal is to help our audience of over one million development practitioners do more good for more people. Devex provides journalistic coverage of the development sector, as well as a variety of talent, consulting, and business development services to organizations around the globe.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The data has been split into a test and training set.
+
+devex_train.csv is the dataset that you will use to train your model. This dataset includes the "outcome" which in this competition is the "label(s)," i.e. which of the 27 indicators are relevant to the given text. This dataset includes the columns ID, Type, Text, and Label_1 through Label_12.
+
+devex_test_questions.csv is the dataset to which you will apply your model to test how well it performs. Use your model and this dataset to predict the correct labels. This dataset includes the columns ID, Type, and Text.
+
+devex_submission_format.csv is a table to provide an example of what your submission file should look like. This table has 28 columns: ID, and the 27 labels/indicators as "dummy variables." A value of "1" indicates that the label IS relevant and a value of "0" indicates that the label IS NOT relevant.
+
+Notes on the data: The text contains some HTML mark-up. Dealing with this “dirtiness” of the text is part of the challenge. All the text is in English. The training data was manually classified by Devex analysts and subject-matter experts.
+
+Variables in devex_train.csv
+
+ID: Unique ID of text to be classified
+Type: The type or source of the text. (Contract=Names of contracts, News=Titles of news articles, Organization=Text about an organization, Open Opp=Description of an opportunity)
+Text: text to be classified
+Label_1 through Label_12: These columns are populated starting at Label_1 increasing incrementally until all relevent classifications are populated, to a maximum of 12 Labels. The remaining Labels are left blank.
+The 27 possible SDG 3 indicators are (In the dataset, you will use only the indicator's code, e.g. "3.1.1"):
+
+3.1.1 - Maternal mortality ratio
+3.1.2 - Proportion of births attended by skilled health personnel
+3.2.1 - Under-5 mortality rate
+3.2.2 - Neonatal mortality rate
+3.3.1 - Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations
+3.3.2 - Tuberculosis incidence per 100,000 population
+3.3.3 - Malaria incidence per 1,000 population
+3.3.4 - Hepatitis B incidence per 100,000 population
+3.3.5 - Number of people requiring interventions against neglected tropical diseases
+3.4.1 - Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease
+3.4.2 - Suicide mortality rate
+3.5.1 - Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders
+3.5.2 - Harmful use of alcohol, defined according to the national context as alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol
+3.6.1 - Death rate due to road traffic injuries
+3.7.1 - Proportion of women of reproductive age (aged 15–49 years) who have their need for family planning satisfied with modern methods
+3.7.2 - Adolescent birth rate (aged 10–14 years; aged 15–19 years) per 1,000 women in that age group
+3.8.1 - Coverage of essential health services (defined as the average coverage of essential services based on tracer interventions that include reproductive, maternal, newborn and child health, infectious diseases, non-communicable diseases and service capacity and access, among the general and the most disadvantaged population)
+3.8.2 - Proportion of population with large household expenditures on health as a share of total household expenditure or income
+3.9.1 - Mortality rate attributed to household and ambient air pollution
+3.9.2 - Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (exposure to unsafe Water, Sanitation and Hygiene for All (WASH) services)
+3.9.3 - Mortality rate attributed to unintentional poisoning
+3.a.1 - Age-standardized prevalence of current tobacco use among persons aged 15 years and older
+3.b.1 - Proportion of the target population covered by all vaccines included in their national programme
+3.b.2 - Total net official development assistance to medical research and basic health sector
+3.b.3 - Proportion of health facilities that have a core set of relevant essential medicines available and affordable on a sustainable basis
+3.c.1 - Health worker density and distribution
+3.d.1 - International Health Regulations (IHR) capacity and health emergency preparedness
