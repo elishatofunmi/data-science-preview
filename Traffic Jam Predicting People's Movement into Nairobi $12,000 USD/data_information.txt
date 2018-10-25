@@ -1,0 +1,45 @@
+ride_id: unique ID of a vehicle on a specific route on a specific day and time.
+seat_number: seat assigned to ticket
+payment_method: method used by customer to purchase ticket from Mobiticket (cash or Mpesa)
+payment_receipt: unique id number for ticket purchased from Mobiticket
+travel_date: date of ride departure. (MM/DD/YYYY)
+travel_time: scheduled departure time of ride. Rides generally depart on time. (hh:mm)
+travel_from: town from which ride originated
+travel_to: destination of ride. All rides are to Nairobi.
+car_type: vehicle type (shuttle or bus)
+max_capacity: number of seats on the vehicle
+
+
+
+
+
+
+
+
+
+
+
+
+Nairobi is one of the most heavily congested cities in Africa. Each day thousands of Kenyans make the trip into Nairobi from towns such as Kisii, Keroka, and beyond for work, business, or to visit friends and family. The journey can be long, and the final approach into the city can impact the length of the trip significantly depending on traffic. How do traffic patterns influence people’s decisions to come into the city by bus and which bus to take? Does knowing the traffic patterns in Nairobi help anticipate the demand for particular routes at particular times?
+
+The aim of the competition is to create a predictive model using traffic data provided from Uber Movement and historic bus ticket sales data from Mobiticket to predict the number of tickets that will be sold for buses into Nairobi from cities in "up country" Kenya.
+
+The data used to train the model will be historic hourly traffic patterns in Nairobi and historic ticket purchasing data for 14 bus routes into Nairobi from October 2017 to April 2018, and includes the place or origin, the scheduled time of departure, the channel used for the purchase, the type of vehicle, the capacity of the vehicle, and the assigned seat number. Zindi competitors will be allowed to create their own customized traffic datasets using the Uber Movement platform.
+
+This resulting model can be used by Mobiticket and bus operators to anticipate customer demand for certain rides, to manage resources and vehicles more efficiently, to offer promotions and sell other services more effectively, such as micro-insurance, or even improve customer service by being able to send alerts and other useful information to customers.
+
+The solutions to this challenge are the first step towards solving Nairobi's traffic problems. We look forward to taking this journey with you!
+
+This competition is sponsored by Uber , Mobiticket, and insight2impact.
+
+About Uber Movement (www.movement.uber.com)
+
+Uber Movement is a website that helps urban planners, city officials, riders and the public better understand the transportation needs of their cities. Presently, Movement shows average travel times between zones in a city, derived from anonymous and aggregated on-trip data from Uber vehicles. Uber is planning the next set of functionality and datasets that will be added to Movement in the coming months. Uber Movement is available for 22 cities around the world.
+
+About Mobiticket (www.mobiticket.co.ke)
+
+Mobiticket is a start-up based out of Kenya that is working to digitize the transport sector across Africa through online/mobile bookings and cashless payments. Mobiticket is a service that connects customers to bus operators and enables them to book, reserve seats, pay, and get bus tickets all using their phones (MPESA or other mobile wallets).
+
+About insight2impact (www.i2ifacility.org)
+
+insight2impact (i2i) is a resource centre supporting the use of data for decision-making, with a focus on financial and economic inclusion. One of our flagship initiatives is DataHack4FI (http://datahack4fi.org/) – a pan-African innovation competition that focuses on the use of data (and tech) for good in the financial sector. Mobiticket was the overall winner of DataHack4FI Season 1. i2i is hosted by FinMark Trust and Cenfri and funded by the Gates Foundation in partnership with The Mastercard Foundation.
