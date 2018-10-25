@@ -1,0 +1,131 @@
+https://zindi.africa/competitions/social-media-prediction-challenge
+
+
+
+Description
+The objective of this competition is to create a model to predict the number of retweets a tweet will get on Twitter. The data used to train the model will be approximately 2,400 tweets each from 38 major banks and mobile network operators across Africa.
+
+A machine learning model to predict retweets would be valuable to any business that uses social media to share important information and messages to the public. This model can be used as a tool to help businesses better tailor their tweets to ensure maximum impact and outreach to clients and non-clients.
+
+This competition is sponsored by insight2impact (www.i2ifacility.org) and Ixio Analytics (www.ixioanalytics.com).
+
+About insight2impact (i2i):
+
+i2i is a resource centre supporting the use of data for decision-making, with a focus on financial and economic inclusion. i2i is hosted by FinMark Trust and Cenfri and funded by the Gates Foundation in partnership with The Mastercard Foundation.
+
+
+
+
+DATA
+The data has been split into a test and training set.
+
+train.json (zipped) is the dataset that you will use to train your model. This dataset includes about 2,400 consecutive tweets from each of the companies listed below, for a total of 96,562 tweets.
+
+test_questions.json (zipped) is the dataset to which you will apply your model to test how well it performs. Use your model and this dataset to predict the number of retweets a tweet will receive. The test set are the consecutive tweets that followed the first tweets provided in the training sets. There are a maximum of 800 tweets per company in this test set. This dataset includes the same fields as train.json except for the retweet_count and favorite_count variables.
+
+sample_submission.csv is a table to provide an example of what your submission file should look like.
+
+Notes on the data: This data was downloaded from Twitter on 23 August 2018. So represents the retweets and favorites at that point in time.
+
+Variables in train.json and test_questions.json are as described in the twitter documentation:
+
+Tweet Object - https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
+
+User Object - https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
+
+Entities Object- https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/entities-object
+
+GeoObject - https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/geo-objects
+
+Companies included in this dataset:
+
+Nigeria
+
+Zenith Bank
+First Bank Nigeria
+Guaranty Trust Bank
+Access Bank
+Diamond Bank
+Ecobank
+MTN
+Airtel
+GloMobile
+Ghana
+
+Barclays
+Fidelity
+Ecobank
+Access
+Ghana commercial bank
+MTN
+Vodafone
+Airtel Tigo
+South Africa
+
+Standard Bank
+ABSA-Barclays
+FNB
+Nedbank
+Capitec
+Vodacom
+MTN
+Cell C
+Telkom
+Kenya
+
+Equity
+Kenya Commercial Bank
+Co-operative Bank
+Standard Chartered
+Safaricom
+Airtel
+Telkom
+Uganda
+
+Stanbic
+DFCU
+Standard Chartered
+MTN
+Airtel
+Competitions
+
+
+
+
+
+
+# Evaluation
+The Mean Absolute Error metric will be used to evaluate accuracy of the submitted solutions. (Therefore, the lower your score the better your accuracy.)
+
+Your submission file should be in CSV format and look like (there is an example of the submission file format provided under Data):
+
+ID            retweet_count
+12345               2
+11324               5
+23578               0
+
+
+
+
+
+
+
+
+RULES
+You may use only the datasets provided for this competition to build your model.
+
+If your solution places 1st, 2nd, or 3rd in the final ranking, you will be required to submit your winning solution code to us for verification and you thereby agree to assign all worldwide rights of copyright in and to such winning solution to Zindi.
+
+Your solution must not infringe the rights of any third party and you must be legally entitled to assign ownership of all rights of copyright in and to the winning solution code to Zindi.
+
+Competitors are currently able to register and submit solutions as individuals only. However, you can still collaborate with others and work as teams towards a submission. It will be your responsibility to designate one person to submit your team’s solution on your team’s behalf. Prizes are also transferred only to the individual user that submitted the winning solution. We plan to enable teams on Zindi in the near future.
+
+The solution must use publically-available, open-source packages only.
+
+Maximum five solutions submitted per day. Your highest-scoring solution will be the one by which you are judged.
+
+Note that there is Public and Private Leaderboards. The Public Leaderboard excludes approximately 20% of the test dataset. While the competition is open, the Public Leaderboard will rank the submitted solutions by the accuracy score they achieve. Upon close of the competition, the Private Leaderboard, which covers 100% of the test dataset, will be made public and will constitute the final ranking for the competition.
+
+Refer to the FAQs and Terms of Use for additional rules that may apply to this competition.
+
+We reserve the right to modify these rules at any time as necessary.
