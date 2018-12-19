@@ -1,0 +1,13 @@
+These data come from a 2015 study conducted by the Busara Center in rural Siaya County, near Lake Victoria in western Kenya. The survey includes more than 70 features, including information about household composition, economic activity, financial flows and health. In addition, study participants were asked to complete a depression screening tool. This data are hard to collect en masse, due to the sensitive content, and need for trained staff and referral procedures.
+
+The data has been split into a test and training set.
+
+train.csv is the dataset that you will use to train your model.
+
+test.csv is the dataset to which you will apply your model to test how well it performs. Use your model and this dataset to predict depression.
+
+sample_submission.csv is a table to provide an example of what your submission file should look like.
+
+variable_explanations.csv is a complete list of the variables and their explanations
+
+Note: The instrument used is an epidemiological rather than clinical measure of depression. In other words, it is highly suggestive of the presence of depression but not equivalent to a diagnosis, which can only be made by a licensed clinician.
