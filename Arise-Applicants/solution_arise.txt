@@ -1,0 +1,21 @@
+select * from (SELECT * FROM (select * from `propane-highway-202915.arise.ChallengeLoanInfo` where payout_status = 'SUCCESS')
+WHERE loanType = 'paylater')
+where loanTerm = 60 or loanTerm = 90 or loanTerm = 180
+
+
+
+
+
+with FirstCustomers as (
+select distinct(loanid) as id, min(dueDate) as mindate 
+from `propane-highway-202915.arise.ChallengeRepaymentsInfo` group by loanid)
+
+
+
+
+select loanId, dueDate,settleDays, paymentRatio, 
+(case when settleDays > 7 or settleDays is Null then 1 else 0 end) as FirstPaymentDefault 
+from `propane-highway-202915.arise.ChallengeRepaymentsInfo` as FP 
+join FirstCustomers as FC on FC.id = FP.loanId 
+where FC.mindate = FP.dueDate
+
