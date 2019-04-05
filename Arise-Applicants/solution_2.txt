@@ -2,7 +2,7 @@
 
 
 with TableTwo as (
-select loanId, dueDate,settleDays, paymentRatio, 
+select loanId,  paymentRatio, 
 (case when settleDays > 7 or settleDays is Null then 1 else 0 end) as FirstPaymentDefault 
 from `propane-highway-202915.arise.ChallengeRepaymentsInfo` as FP 
 join (select distinct(loanid) as id, min(dueDate) as mindate 
@@ -11,8 +11,11 @@ where FC.mindate = FP.dueDate)
 
 
 
-select *
+select clientId,clientIncome,incomeVerified,clientAge,clientGender,clientMaritalStatus,clientLoanPurpose,clientResidentialStauts,clientState,
+clientTimeAtEmployer,clientNumberPhoneContacts,clientAvgCallsPerDay,loanType,loanNumber,applicationDate,approvalDate,declinedDate,
+disbursementDate,payout_status,dueDate,paidAt,loanAmount,interestRate,loanTerm,max_amount_taken,max_tenor_taken, Ttwo.paymentRatio, Ttwo.FirstPaymentDefault,
+(case when DATE_DIFF(date(paidAt),date(dueDate),day) > 7 or DATE_DIFF(date(paidAt),date(dueDate),day) IS Null then 1 else 0 end) as loanDefault
 from (select * from (SELECT * FROM (select * from `propane-highway-202915.arise.ChallengeLoanInfo` where payout_status = 'SUCCESS')
 WHERE loanType = 'paylater')
-where loanTerm = 60 or loanTerm = 90 or loanTerm = 180) as Tone Full join TableTwo Ttwo 
-on Tone.loandId = Ttwo.loanId
+where loanTerm = 60 or loanTerm = 90 or loanTerm = 180) as Tone inner join TableTwo Ttwo 
+on Tone.loanId = Ttwo.loanId
